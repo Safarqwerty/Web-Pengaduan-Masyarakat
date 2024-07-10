@@ -22,7 +22,7 @@ body {
     @apply border-white bg-white px-8 py-3 text-[#E1AD3F];
   }
   .btn_green {
-    @apply border-[#E1AD3F] bg-[#E1AD3F] px-8 py-5 text-white hover:bg-[#b89447];
+    @apply border-[#E1AD3F] bg-[#E1AD3F] rounded-5xl px-8 py-5 text-white hover:bg-[#b89447];
   }
   .btn_dark_blue {
     @apply bg-[#4771C4] px-8 py-4 text-white transition-all hover:bg-[#386cd5];
