@@ -28,9 +28,13 @@ function Form() {
       <div className="hero-map" />
 
       <div className="relative z-20 flex flex-1 flex-col xl:max-w-[520px]">
+        <p className="lg:text-[#e8ae32] mb-2 font-medium text-lg">
+          Ayo! isi pengaduan sesuai yang ingin kalian sampaikan
+        </p>
+        <hr className="border-0 h-1 bg-blue-500 w-24 mb-8" />
         <form
           onSubmit={handleSubmit}
-          className="px-6 py-20 bg-white shadow-md rounded-lg"
+          className="px-6 py-16 bg-white shadow-md rounded-lg"
         >
           <div className="mb-4">
             <label
