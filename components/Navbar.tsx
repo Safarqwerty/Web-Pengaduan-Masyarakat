@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flexBetween max-container padding-container relative z-30 py-5"
+      className="flexBetween max-container padding-container relative z-30 py-5 bg-transparent"
       ref={menuRef}
     >
       <Link href="/">

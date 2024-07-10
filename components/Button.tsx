@@ -4,7 +4,7 @@ type ButtonProps = {
   type: "button" | "submit";
   title: string;
   icon?: string;
-  variant: "btn_dark_blue";
+  variant: string;
 };
 
 function Button({ type, title, icon, variant }: ButtonProps) {
