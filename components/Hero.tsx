@@ -13,10 +13,10 @@ function Hero() {
         </p>
 
         <div className="flex flex-col w-full gap-3 sm:flex-row my-11">
-          <Button type="button" title="Isi pengaduan" variant="btn_green" />
+          <Button type="button" title="Isi Pengaduan" variant="btn_green" />
           <Button
             type="button"
-            title="history pengaduan"
+            title="History Pengaduan"
             variant="btn_white_text"
           />
         </div>

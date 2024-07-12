@@ -48,7 +48,7 @@ const Navbar = () => {
           >
             <Link
               href={link.href}
-              className="block lg:inline-block regular-16 text-gray-50 lg:text-gray-50 py-2 px-6 lg:py-0 lg:px-0 transition-all hover:font-bold"
+              className="block lg:inline-block regular-16 text-gray-50 lg:text-white py-2 px-6 lg:py-0 lg:px-0 transition-all hover:font-bold"
             >
               {link.label}
             </Link>
