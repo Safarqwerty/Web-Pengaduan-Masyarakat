@@ -4,10 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(true); // Tambahkan state untuk user
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
@@ -40,27 +40,29 @@ const Navbar = () => {
           menuOpen ? "block" : "hidden"
         } lg:block absolute top-full left-0 w-full bg-white lg:bg-transparent lg:static lg:w-auto`}
       >
-        {NAV_LINKS.map((link) => (
-          <li
-            key={link.key}
-            className="lg:inline-block block"
-            onClick={() => setMenuOpen(false)}
-          >
-            <Link
-              href={link.href}
-              className="block lg:inline-block regular-16 text-gray-50 lg:text-white py-2 px-6 lg:py-0 lg:px-0 transition-all hover:font-bold"
+        {user && // Hanya tampilkan NAV_LINKS jika user true
+          NAV_LINKS.map((link) => (
+            <li
+              key={link.key}
+              className="lg:inline-block block"
+              onClick={() => setMenuOpen(false)}
             >
-              {link.label}
-            </Link>
-          </li>
-        ))}
+              <Link
+                href={link.href}
+                className="block lg:inline-block regular-16 text-gray-50 lg:text-white py-2 px-6 lg:py-0 lg:px-0 transition-all hover:font-bold"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         <div className="lg:flexCenter hidden">
-          <Button
-            type="button"
-            title="Login"
-            icon="/user.svg"
-            variant="btn_dark_blue"
-          />
+          <Link
+            href="/login"
+            className="font-semibold text-[#E1AD3F] btn_dark_blue flexCenter gap-3 rounded-xl border"
+            onClick={() => setUser(!user)}
+          >
+            <img src="user.svg" alt="" /> {user ? "Logout" : "Login"}
+          </Link>
         </div>
       </ul>
 

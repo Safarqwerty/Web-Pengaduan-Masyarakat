@@ -32,10 +32,10 @@ function Login() {
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
-            Email
+            Username
           </label>
           <input
-            type="email"
+            type="text"
             id="email"
             value={email}
             onChange={handleEmailChange}

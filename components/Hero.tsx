@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Button from "./Button";
 
 function Hero() {
   return (
-    <section className="max-container padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+    <section className="max-container h-screen padding-container flex flex-col gap-20 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
       <div className="hero-map" />
 
       <div className="relative z-20 flex flex-1 flex-col xl:max-w-[520px]">
@@ -12,13 +13,13 @@ function Hero() {
           pengaduan yang ingin masyarakat sampaikan.
         </p>
 
-        <div className="flex flex-col w-full gap-3 sm:flex-row my-11">
-          <Button type="button" title="Isi Pengaduan" variant="btn_green" />
-          <Button
-            type="button"
-            title="History Pengaduan"
-            variant="btn_white_text"
-          />
+        <div className="flex flex-col w-full gap-3 items-center sm:flex-row my-11">
+          <Link href="/pengaduan" className="font-semibold btn_green">
+            Isi Pengaduan
+          </Link>
+          <Link href="/history" className="font-semibold btn_white_text">
+            History Pengaduan
+          </Link>
         </div>
       </div>
     </section>
